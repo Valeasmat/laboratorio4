@@ -4,7 +4,7 @@
     Author     : Adminfoco
 --%>
 
-<%@page import="edu.cibertec.capitulo3.entity.UsuarioEntity"%> 
+<%@page import="edu.cibertec.capitulo4.entity.UsuarioEntity"%> 
 <%@page import="java.util.List"%> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

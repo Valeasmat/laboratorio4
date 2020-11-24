@@ -31,9 +31,11 @@ public class UsuarioService {
         
         Optional<UsuarioEntity> busqueda=usuarioRepositorio.findById(usuario.getUsuario());
         if (busqueda.isPresent()){
-            rpta=null;
-        } else {
-            rpta=busqueda.get();
+            if(!busqueda.get().getClave().equalsIgnoreCase(usuario.getClave())){
+                rpta=null;
+            }else {
+                rpta=busqueda.get();
+            }
         }
         return rpta;
     }
