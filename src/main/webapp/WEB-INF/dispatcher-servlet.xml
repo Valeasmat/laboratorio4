@@ -42,7 +42,7 @@ and open the template in the editor.
              p:dataSource-ref="dataSource">         
            <property name="jpaVendorAdapter">             
                <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">                 
-                   <property name="generateDdl" value="true" />                 
+                   <property name="generateDdl" value="false" />                 
                    <property name="showSql" value="true" />                 
                    <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"/>             
                </bean>         
