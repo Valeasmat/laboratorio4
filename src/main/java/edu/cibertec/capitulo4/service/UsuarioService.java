@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cibertec.capitulo3.service;
+package edu.cibertec.capitulo4.service;
 
-import edu.cibertec.capitulo3.dao.UsuarioDAO;
-import edu.cibertec.capitulo3.entity.UsuarioEntity;
+import edu.cibertec.capitulo4.dao.UsuarioDAO;
+import edu.cibertec.capitulo4.dao.repository.UsuarioRepositorio;
+import edu.cibertec.capitulo4.entity.UsuarioEntity;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +23,19 @@ public class UsuarioService {
     @Autowired
     private UsuarioDAO usuarioDAO;
     
+    @Autowired
+    private UsuarioRepositorio usuarioRepositorio;
+    
     public UsuarioEntity validarLogin(UsuarioEntity usuario){
-        return usuarioDAO.validaLogin(usuario);
+        UsuarioEntity rpta=null;
+        
+        Optional<UsuarioEntity> busqueda=usuarioRepositorio.findById(usuario.getUsuario());
+        if (busqueda.isPresent()){
+            rpta=null;
+        } else {
+            rpta=busqueda.get();
+        }
+        return rpta;
     }
     
     public void insertaUsuario(UsuarioEntity ue){

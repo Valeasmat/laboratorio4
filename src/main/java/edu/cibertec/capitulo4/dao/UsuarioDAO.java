@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cibertec.capitulo3.dao;
+package edu.cibertec.capitulo4.dao;
 
-import edu.cibertec.capitulo3.entity.UsuarioEntity;
+import edu.cibertec.capitulo4.entity.UsuarioEntity;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;

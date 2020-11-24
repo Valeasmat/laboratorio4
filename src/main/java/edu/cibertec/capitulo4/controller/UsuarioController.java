@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cibertec.capitulo3.controller;
+package edu.cibertec.capitulo4.controller;
 
-import edu.cibertec.capitulo3.entity.UsuarioEntity;
-import edu.cibertec.capitulo3.service.UsuarioService;
+import edu.cibertec.capitulo4.entity.UsuarioEntity;
+import edu.cibertec.capitulo4.service.UsuarioService;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
