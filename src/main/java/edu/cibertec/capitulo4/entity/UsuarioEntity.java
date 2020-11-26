@@ -32,7 +32,7 @@ public class UsuarioEntity {
     private String clave;
     @Column(name = "nomCompleto")
     private String nombreCompleto;
-    @Transient
+    @Column
     private byte[] foto;
 
     public byte[] getFoto() {

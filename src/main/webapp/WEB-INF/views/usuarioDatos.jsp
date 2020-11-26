@@ -23,7 +23,7 @@
             <div class="row d-flex justify-content-center mx-auto">
                 <h1>Datos del usuario</h1>
                 <div class="col-md-6 col-xs-12 div-style">
-                    <mvc:form modelAttribute="usuarioBean" action="usuarioGrabar.htm">                         
+                     <mvc:form modelAttribute="usuarioBean" action="usuarioGrabar.htm" enctype="multipart/form-data">                          
                         <table>                             
                             <tr>                                 
                                 <td><mvc:label  path="usuario">Usuario: </mvc:label></td>                                 
@@ -44,10 +44,22 @@
                                 <td><mvc:errors path="nombreCompleto" /></td>                             
                             </tr>                             
                             <tr>                                 
-                                <td colspan="1">                                     
-                                <input type="submit" value="Insertar" class="btn btn-primary button-submit"/>                                 
-                            </td>                             
-                            </tr>                         
+                                <td colspan="3" style="align-content: center">                                 
+                                </td>                             
+                            </tr>
+                            <tr>                                 
+                                <td><label>Subir Foto: </label></td>                                 
+                                <td><input type="file" name="archivo" class="form-control text-box" /></td>                                 
+                                <td></td>                             
+                            </tr>                             
+                            <tr>                                 
+                                <td>                                     
+                                    <input type="submit" value="${accion}" class="btn btn-primary button-submit"/>                                 
+                                </td>                                 
+                                <td>                                     
+                                    <a href="usuarioListar.htm" class="btn btn-primary buttonsubmit">Cancelar</a>                                 
+                                </td>                             
+                            </tr>   
                         </table>                     
                     </mvc:form>                 
                 </div>             

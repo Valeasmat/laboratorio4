@@ -13,5 +13,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Adminfoco
  */
 public interface UsuarioRepositorio extends JpaRepository<UsuarioEntity,String> {
-    
+   public UsuarioEntity findByUsuarioAndClave(String usuario,String clave); 
 }
