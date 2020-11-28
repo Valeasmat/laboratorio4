@@ -15,5 +15,9 @@
         <h1>${mensaje}</h1>
         <br/><br/>
         <a href="loginMostrar.htm">Ingresar al login</a>
+        <br/>
+        <a href="cursoMostrar.htm">Ingresar a la consulta de cursos</a>
+        <br/>
+        <a href="matriculaMostrar.htm">Ingresar a Matricula</a>
     </body>
 </html>
